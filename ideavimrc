@@ -87,21 +87,30 @@ set clipboard=unnamed
 """""""""""""""""""""""""""""""""""""""
 "  IDEA SPECIFIC KEY BINDINGS
 " Press ⌘ Сmd ⇧ Shift I to reload the changes.
+" SEE https://github.com/JetBrains/ideavim?tab=readme-ov-file#finding-action-ids to find action ids
 " Note use 'SearchEverywhere' to find Action Names for keybindings.
 nmap <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>ff <Action>(FindInPath)
 map <leader>fs <Action>(SearchEverywhere)
-map <leader>fg <Action>(GotoFile)
+map <leader>sg <Action>(GotoFile)
 map <leader>fb <Action>(Switcher)
 map <leader>fr <Action>(RecentFiles)
 map <leader>fl <Action>(RecentLocations)
 map <leader>fu <Action>(FindUsages)
+map <leader>gd <Action>(GotoDeclaration)
+map <leader>gt <Action>(GotoTest)
 " map <leader>fw <Action>( )
+
+map <leader>fn <Action>(CopyReferencePopupGroup)
 
 map <leader>ft <Action>(GotoTest)
 
 map <F12> <Action>(QuickDefinition)
 map <F1> <Esc>
+
+map <leader>lr <Action>(Run)
+map <leader>ln <Action>(GotoNextError)<Action>(ShowErrorDescription)
+map <leadeR>lk <Action>(ShowErrorDescription)
 
 " let g:WhichKeyDesc_windows_maximize = "<leader>wm maximize"
 " let g:WhichKey_ShowVimActions = "true"
